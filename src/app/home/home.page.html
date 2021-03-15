@@ -1,20 +1,25 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Gestion des etudiants
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-item>
+    <ion-button expand="block" (click)="addEtudiant1()">ajouter un etudiant </ion-button>
+  </ion-item>
+  <ion-list>
+    <ion-item *ngFor="let lv of liste">
+      <ion-avatar slot="start">
+        <img src="assets/avatar1.png" >
+      </ion-avatar>
+      <ion-label><h3>{{lv.nom+" "}}{{lv.prenom}}</h3><p> {{lv.departement}}</p><p> {{lv.groupe}}</p></ion-label>
+      <p><ion-button color="success" (click)="allermodif(lv)">modifier</ion-button>
+      </p><p><ion-button color="danger" (click)="delete(lv)">del</ion-button>
+    </p></ion-item>
+
+  </ion-list>
 </ion-content>

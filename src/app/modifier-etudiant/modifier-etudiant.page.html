@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>modifierEtudiant</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-input [(ngModel)]="lv.nom" placeholder="nom">
+
+
+  </ion-input>
+  <ion-input [(ngModel)]="lv.prenom" ></ion-input>
+  <ion-input [(ngModel)]="lv.departement" ></ion-input>
+  <ion-input [(ngModel)]="lv.groupe" ></ion-input>
+  <ion-button (click)="modifier()">edit</ion-button>
+
+</ion-content>

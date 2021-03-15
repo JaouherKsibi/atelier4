@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ajouterEtudiant</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-input [(ngModel)]="nom" placeholder="nom">
+
+
+</ion-input>
+<ion-input [(ngModel)]="prenom" placeholder="prenom"></ion-input>
+<ion-input [(ngModel)]="departement" placeholder="departement"></ion-input>
+<ion-input [(ngModel)]="groupe" placeholder="groupe"></ion-input>
+<ion-button (click)="addEtudiant()">add</ion-button>
+</ion-content>
